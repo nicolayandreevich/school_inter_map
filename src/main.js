@@ -69,7 +69,7 @@ function showPicture(location) {
 }
 
 function goTo(index) {
-  if (!locations[index] || isLoading) return;
+  if (!locations[index]) return;
   const location = locations[index];
   const markers = map.showLocation(location);
   markers.forEach((marker) => marker.bindPopup(createPopupContent(location), { autoPan: false }));
