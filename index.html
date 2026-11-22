@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="description" content="Интерактивная карта истории восстания декабристов.">
+  <title>История восстания декабристов</title>
+</head>
+<body>
+  <main id="app">
+    <header class="site-title"><h1 id="siteTitle">История восстания декабристов</h1></header>
+    <section class="loader panel" id="loader" aria-label="Загрузка своей таблицы">
+      <div class="loader-header">
+        <h2>Своя таблица</h2>
+        <button class="icon-button" id="loaderToggle" type="button" aria-expanded="true" aria-label="Свернуть панель">−</button>
+      </div>
+      <form class="loader-body" id="sheetForm">
+        <label class="visually-hidden" for="sheetUrl">Ссылка на Google-таблицу или её ID</label>
+        <input id="sheetUrl" type="text" placeholder="Ссылка на Google-таблицу или ID" autocomplete="off">
+        <button class="primary-button" id="loadBtn" type="submit">Загрузить таблицу</button>
+        <p class="loader-msg" id="loaderMsg" role="status" aria-live="polite"></p>
+        <p class="hint">Таблица должна быть доступна всем, у кого есть ссылка.</p>
+      </form>
+    </section>
+    <aside class="picturebar panel" id="picturebar" aria-label="Фотография"><h2>Загрузка…</h2><p>Подключение к таблице</p></aside>
+    <aside class="sidebar panel" id="sidebar" tabindex="0" aria-label="Описание локации"><h2>Загрузка…</h2><p>Подключение к таблице</p></aside>
+    <div id="map" aria-label="Интерактивная карта локаций"></div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
